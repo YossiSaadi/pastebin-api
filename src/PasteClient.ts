@@ -173,12 +173,6 @@ export default class PasteClient {
    * @see [https://pastebin.com/doc_api#14](https://pastebin.com/doc_api#14)
    */
   async getRawPasteByKey(options: GetRawPasteOptions): Promise<string> {
-    if (!options.userKey) {
-      throw new TypeError(
-        `${ERROR_PREFIX} 'userKey' must be provided (PasteClient#getRawPasteByKey)`,
-      );
-    }
-
     if (!options.pasteKey) {
       throw new TypeError(
         `${ERROR_PREFIX} 'pasteKey' must be provided (PasteClient#getRawPasteByKey)`,
@@ -191,7 +185,7 @@ export default class PasteClient {
       body: this.encode({
         api_option: "show_paste",
         api_dev_key: this.apiKey,
-        api_user_key: options.userKey,
+        api_user_key: options.userKey || "",
         api_paste_key: options.pasteKey,
       }),
     });

@@ -340,7 +340,10 @@ export interface LoginOptions {
   password: string;
 }
 
-export type GetRawPasteOptions = DeletePasteOptions;
+export interface GetRawPasteOptions {
+  pasteKey: string;
+  userKey?: string;
+}
 
 export interface ParsedPaste {
   paste_key: string;

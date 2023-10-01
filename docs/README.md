@@ -162,8 +162,8 @@ console.log(data);
 ### Options
 
 | Name       | Type     | Description                                                                 | Required |
-| ---------- | -------- | --------------------------------------------------------------------------- | -------- |
-| `userKey`  | `string` | The token returned from [PasteClient#login](#login-using-name-and-password) | `true`   |
+| ---------- | -------- | --------------------------------------------------------------------------- |----------|
+| `userKey`  | `string` | The token returned from [PasteClient#login](#login-using-name-and-password) | `false`  |
 | `pasteKey` | `string` | The key (id) of the paste                                                   | `true`   |
 
 [**Back To Top**](#documentation)
